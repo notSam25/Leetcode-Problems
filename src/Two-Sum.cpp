@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <vector>
 
-std::vector<int> Input = {3, 2, 4};
-std::vector<int> TwoSum(std::vector<int> &nums, int target) {
+std::vector<int> TwoSum(const std::vector<int> &nums, int target) {
   
   const int middle = (nums.size() - 1) / 2;
   int index = middle;
@@ -28,6 +27,7 @@ std::vector<int> TwoSum(std::vector<int> &nums, int target) {
 
 int main() {
 
+  const std::vector<int> Input = {3, 2, 4};
   srand(time(0));
   const int TargetNumber = 6;
 
