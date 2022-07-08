@@ -1,11 +1,6 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
-
-import javax.swing.text.DefaultEditorKit.CopyAction;
 
 public class MoveZero {
   public static void main(String[] args) {
@@ -16,8 +11,9 @@ public class MoveZero {
   }
 
   public static void moveZeros(int[] nums) {
+
+    // TODO: redo this solution. I must have been drunk when I made this...
     List<Integer> copy = Arrays.stream(nums).boxed().collect(Collectors.toList());
-    int[] temp;
     int index = 0, totalZero = 0;
     while(index < copy.size()) {
       if(copy.get(index) == 0) {
